@@ -4,10 +4,8 @@ import Footer from '../Footer/Footer';
 
 const Stats = () => {
     return (
-        <div>
-            <Navbar></Navbar>
+        <div className='min-h-screen'>
             <h3>Stats</h3>
-            <Footer></Footer>
         </div>
     );
 };

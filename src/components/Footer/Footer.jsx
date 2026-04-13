@@ -1,16 +1,26 @@
+import { useEffect } from "react";
 import { FaFacebookF, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Footer = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, // animation speed
+      once: true,     // animate only once
+    });
+  }, []);
+
   return (
     <footer className="bg-[#244D3F] text-white py-12 px-4">
       <div className="max-w-5xl mx-auto text-center">
         
-        <h1 className="text-3xl md:text-5xl font-bold mb-4">
+        <h1 data-aos="fade-left" className="text-3xl md:text-5xl font-bold mb-4">
           KeenKeeper
         </h1>
 
-        <p className="text-sm md:text-base text-gray-200 mb-8 max-w-2xl mx-auto">
+        <p data-aos="fade-right" className="text-sm md:text-base text-gray-200 mb-8 max-w-2xl mx-auto">
           Your personal shelf of meaningful connections. Browse, tend, and
           nurture the relationships that matter most.
         </p>
@@ -18,7 +28,7 @@ const Footer = () => {
         <div className="mb-8">
           <p className="mb-3 font-medium">Social Links</p>
 
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4" data-aos="zoom-in">
             <a className="btn btn-circle bg-white text-black hover:bg-gray-200" href="https://github.com">
               <FaGithub />
             </a>

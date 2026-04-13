@@ -4,10 +4,8 @@ import Footer from '../Footer/Footer';
 
 const Timeline = () => {
     return (
-        <div>
-            <Navbar></Navbar>
+        <div className='min-h-screen'>
             <h4>TimeLine</h4>
-            <Footer></Footer>
         </div>
     );
 };
