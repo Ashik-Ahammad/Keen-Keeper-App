@@ -5,9 +5,7 @@ import Footer from '../Footer/Footer';
 const Stats = () => {
     return (
         <div>
-            <Navbar></Navbar>
             <h3>Stats</h3>
-            <Footer></Footer>
         </div>
     );
 };
