@@ -121,9 +121,15 @@
   },
   {
     "id": 11,
+<<<<<<< HEAD
     "name": "Zahidul Hassan Rafi",
     "picture": "https://randomuser.me/api/portraits/men/31.jpg",
     "email": "zahidul.hassan@gmail.com",
+=======
+    "name": "Zahidul Islam Rafi",
+    "picture": "https://randomuser.me/api/portraits/men/31.jpg",
+    "email": "zahidul.islam@gmail.com",
+>>>>>>> 5c66a73576390d4acbcac8a6956f4a76182826a9
     "days_since_contact": 11,
     "status": "almost due",
     "tags": ["Remote Work", "DevOps"],

@@ -4,12 +4,16 @@ import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { MdOutlineVideoCall, MdTextsms } from "react-icons/md";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { useLoaderData } from "react-router";
+<<<<<<< HEAD
 import { toast } from "react-toastify";
+=======
+>>>>>>> 5c66a73576390d4acbcac8a6956f4a76182826a9
 
 const FriendDetails = () => {
   const friend = useLoaderData();
 
   const getStatusColor = (status) => {
+<<<<<<< HEAD
     if (status === "on-track") return "bg-green-800";
     if (status === "almost due") return "bg-yellow-500";
     if (status === "overdue") return "bg-red-700";
@@ -17,6 +21,15 @@ const FriendDetails = () => {
 
   return (
     <div className="p-6 mt-10 min-h-screen w-7/12 mx-auto">
+=======
+    if (status === "on-track") return "bg-green-500";
+    if (status === "almost due") return "bg-yellow-500";
+    if (status === "overdue") return "bg-red-500";
+  };
+
+  return (
+    <div className="p-6 mt-10 min-h-screen w-9/12 mx-auto">
+>>>>>>> 5c66a73576390d4acbcac8a6956f4a76182826a9
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="bg-white rounded-2xl shadow p-6 text-center">
           <img
@@ -28,7 +41,11 @@ const FriendDetails = () => {
           <h2 className="text-xl font-bold">{friend.name}</h2>
 
           <div
+<<<<<<< HEAD
             className={`inline-block px-3 py-1 text-white text-sm rounded-full capitalize mt-2 ${getStatusColor(
+=======
+            className={`inline-block px-3 py-1 text-white text-sm rounded-full mt-2 ${getStatusColor(
+>>>>>>> 5c66a73576390d4acbcac8a6956f4a76182826a9
               friend.status,
             )}`}
           >
@@ -51,6 +68,7 @@ const FriendDetails = () => {
           <p className="text-gray-400 mt-3">{friend.email}</p>
 
           <div className="mt-6 space-y-3">
+<<<<<<< HEAD
             <button className="w-full border border-gray-100 shadow-md py-2 rounded-lg hover:bg-gray-100 hover:cursor-pointer">
               <span className="flex flex-row gap-x-2 items-center justify-center">
                 <HiOutlineBellSnooze /> Snooze 2 Weeks
@@ -67,6 +85,22 @@ const FriendDetails = () => {
                 <RiDeleteBin5Line />
                 Delete
               </span>
+=======
+            <button className="w-full border py-2 rounded-lg hover:bg-gray-100">
+              <span className="flex flex-row gap-x-2 items-center justify-center"><HiOutlineBellSnooze /> Snooze 2 Weeks</span>
+            </button>
+            <button className="w-full border py-2 rounded-lg hover:bg-gray-100">
+                <span className="flex flex-row gap-x-2 items-center justify-center">
+              <FaBoxArchive />
+              Archive
+                </span>
+            </button>
+            <button className="w-full border py-2 rounded-lg text-red-500 hover:bg-red-50">
+                <span className="flex flex-row gap-x-2 items-center justify-center">
+              <RiDeleteBin5Line />
+              Delete
+                </span>
+>>>>>>> 5c66a73576390d4acbcac8a6956f4a76182826a9
             </button>
           </div>
         </div>
@@ -98,7 +132,11 @@ const FriendDetails = () => {
               <h3 className="font-semibold text-lg">Relationship Goal</h3>
               <p className="text-gray-500">Connect every {friend.goal} days</p>
             </div>
+<<<<<<< HEAD
             <button className="border px-4 py-1 rounded hover:bg-gray-100 border-gray-100 shadow-md hover:cursor-pointer">
+=======
+            <button className="border px-4 py-1 rounded hover:bg-gray-100">
+>>>>>>> 5c66a73576390d4acbcac8a6956f4a76182826a9
               Edit
             </button>
           </div>
@@ -107,28 +145,37 @@ const FriendDetails = () => {
             <h3 className="font-semibold text-lg mb-4">Quick Check-In</h3>
 
             <div className="grid grid-cols-3 gap-4">
+<<<<<<< HEAD
               <button onClick={() => {
                   toast.success(`Audio call with ${friend.name}!`, {
                     position: "top-right",
                     autoClose: 3000,
                   });
                 }} className="border p-4 border-gray-100 shadow-md rounded-lg hover:bg-gray-100 hover:cursor-pointer">
+=======
+              <button className="border p-4 rounded-lg hover:bg-gray-100">
+>>>>>>> 5c66a73576390d4acbcac8a6956f4a76182826a9
                 <span className="flex flex-col items-center justify-center">
                   <FiPhoneCall />
                   <p>Call</p>
                 </span>
               </button>
+<<<<<<< HEAD
               <button onClick={() => {
                   toast.success(`Text with ${friend.name}!`, {
                     position: "top-right",
                     autoClose: 3000,
                   });
                 }} className="border p-4  border-gray-100 shadow-md rounded-lg hover:bg-gray-100 hover:cursor-pointer">
+=======
+              <button className="border p-4 rounded-lg hover:bg-gray-100">
+>>>>>>> 5c66a73576390d4acbcac8a6956f4a76182826a9
                 <span className="flex flex-col items-center justify-center">
                   <MdTextsms />
                   <p>Text</p>
                 </span>
               </button>
+<<<<<<< HEAD
               <button
                 onClick={() => {
                   toast.success(`Video call with ${friend.name}!`, {
@@ -140,6 +187,11 @@ const FriendDetails = () => {
               >
                 <span className="flex flex-col items-center justify-center">
                   <MdOutlineVideoCall/>
+=======
+              <button className="border p-4 rounded-lg hover:bg-gray-100">
+                <span className="flex flex-col items-center justify-center">
+                  <MdOutlineVideoCall />
+>>>>>>> 5c66a73576390d4acbcac8a6956f4a76182826a9
                   <p>Video</p>
                 </span>
               </button>
