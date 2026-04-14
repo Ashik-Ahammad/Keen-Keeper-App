@@ -8,6 +8,7 @@ import Stats from "./components/Stats/Stats";
 import Home from "./components/Home/Home";
 import NotFound from "./components/NotFound/NotFound";
 import FriendDetails from "./components/FriendDetails/FriendDetails";
+import TimelineContextProvider from "./context/TimelineContextProvider/TimelineContextProvider";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
         loader: async ({ params }) => {
           const res = await fetch("/friends.json");
           const data = await res.json();
-          
+
           return data.find((friend) => friend.id === Number(params.friendId));
         },
         Component: FriendDetails,
@@ -43,6 +44,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <TimelineContextProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </TimelineContextProvider>
   </StrictMode>,
 );

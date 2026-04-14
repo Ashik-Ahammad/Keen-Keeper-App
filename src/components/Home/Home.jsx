@@ -9,7 +9,9 @@ const Home = () => {
     return (
         <>
             <Banner friendsPromise={friendsPromise}></Banner>
-            <Suspense fallback={<div className='text-center text-gray-500'><span className="loading loading-infinity loading-xl text-info"></span></div>}>
+            <Suspense fallback={<div className='flex justify-center items-center py-10'>
+                    <span className="loading loading-infinity loading-xl text-info"></span>
+                </div>}>
                 <Friends friendsPromise={friendsPromise}></Friends>
             </Suspense>
         </>

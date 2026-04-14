@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { Link } from "react-router";
 import Aos from "aos";
@@ -7,26 +6,16 @@ import "aos/dist/aos.css";
 const Friend = ({ friend }) => {
   useEffect(() => {
     Aos.init({
-      duration: 1000, // animation speed
-      once: true,     // animate only once
+      duration: 1000, 
+      once: true,
     });
   }, []);
 
-=======
-import React from "react";
-import { Link } from "react-router";
-
-const Friend = ({ friend }) => {
->>>>>>> 5c66a73576390d4acbcac8a6956f4a76182826a9
   const { id, name, days_since_contact, tags, status, picture } = friend;
 
   return (
     <Link to={`/friend/${id}`} >
-<<<<<<< HEAD
       <div data-aos="fade-left" className="bg-base-200 rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300 hover:cursor-pointer">
-=======
-      <div className="bg-base-200 rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300 hover:cursor-pointer">
->>>>>>> 5c66a73576390d4acbcac8a6956f4a76182826a9
         <div className="flex justify-center">
           <img
             src={picture}
