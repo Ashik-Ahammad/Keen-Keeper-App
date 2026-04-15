@@ -21,7 +21,8 @@ const Timeline = () => {
   const sortedActivities = [...filteredActivities]
 
   return (
-    <div className="p-4 sm:p-6 mt-6 md:mt-10 min-h-screen w-11/12 md:w-9/12 lg:w-7/12 mx-auto">
+    <div className="p-4 sm:p-6 mt-6 md:mt-10 min-h-screen w-full md:w-9/12 lg:w-7/12
+overflow-x-hidden mx-auto">
       <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Timeline</h1>
 
       <div className="mb-6">

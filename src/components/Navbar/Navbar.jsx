@@ -33,7 +33,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        
+
         <Link to="/" className="text-xl pl-2 lg:pl-0">
           <img src={logoImg} alt="logo" className="h-8 w-auto" />
         </Link>
