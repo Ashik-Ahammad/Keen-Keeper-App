@@ -23,15 +23,3 @@ Keen Keeper is a modern web application that helps you maintain meaningful relat
 ## 📂 Project Purpose
 This project is designed to improve personal relationship management by encouraging consistent communication and providing actionable insights.
 
-## 🛠️ Installation & Setup
-
-```bash
-
-# Navigate to project folder
-cd friend-tracker
-
-# Install dependencies
-npm install
-
-# Run the project
-npm run dev
