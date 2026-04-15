@@ -4,9 +4,10 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Friend = ({ friend }) => {
+  
   useEffect(() => {
     Aos.init({
-      duration: 1000, 
+      duration: 1000,
       once: true,
     });
   }, []);

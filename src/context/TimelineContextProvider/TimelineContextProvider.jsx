@@ -10,10 +10,10 @@ const TimelineContextProvider = ({ children }) => {
       id: Date.now(),
       type,
       name,
-      date: new Date().toDateString(),
+      date: new Date().toISOString(),
     };
 
-    setActivities((old) => [newActivity, ...old]);
+    setActivities(old => [newActivity, ...old]);
   };
 
   return (

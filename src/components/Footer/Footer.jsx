@@ -7,15 +7,15 @@ import "aos/dist/aos.css";
 const Footer = () => {
   useEffect(() => {
     Aos.init({
-      duration: 1000, // animation speed
-      once: true,     // animate only once
+      duration: 1000,
+      once: true,
     });
   }, []);
 
   return (
     <footer className="bg-[#244D3F] text-white py-12 px-4">
       <div className="max-w-5xl mx-auto text-center">
-        
+
         <h1 data-aos="fade-left" className="text-3xl md:text-5xl font-bold mb-4">
           KeenKeeper
         </h1>
@@ -29,13 +29,13 @@ const Footer = () => {
           <p className="mb-3 font-medium">Social Links</p>
 
           <div className="flex justify-center gap-4" data-aos="zoom-in">
-            <a className="btn btn-circle bg-white text-black hover:bg-gray-200" href="https://github.com">
+            <a className="btn btn-circle bg-white text-black hover:bg-gray-400" href="https://www.github.com" target="_blank" rel="noopener noreferrer">
               <FaGithub />
             </a>
-            <a className="btn btn-circle bg-white text-black hover:bg-gray-200" href="https://facebook.com">
+            <a className="btn btn-circle bg-white text-black hover:bg-gray-400" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
               <FaFacebookF />
             </a>
-            <a className="btn btn-circle bg-white text-black hover:bg-gray-200" href="https://twitter.com">
+            <a className="btn btn-circle bg-white text-black hover:bg-gray-400 " href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
               <FaXTwitter />
             </a>
           </div>

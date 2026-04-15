@@ -6,16 +6,16 @@ import "aos/dist/aos.css";
 const Banner = ({ friendsPromise }) => {
   useEffect(() => {
     Aos.init({
-      duration: 1000, // animation speed
-      once: true,     // animate only once
+      duration: 1000,
+      once: true,
     });
   }, []);
 
   const friends = use(friendsPromise);
 
-  const onTrackCount = friends.filter(f => f.status === "on-track").length;
+  const onTrackCount = friends.filter(friend => friend.status === "on-track").length;
 
-  const needAttentionCount = friends.filter(f => f.status !== "on-track").length;
+  const needAttentionCount = friends.filter(friend => friend.status !== "on-track").length;
 
   return (
     <div className="pb-12 " data-aos="fade-up">
@@ -27,7 +27,7 @@ const Banner = ({ friendsPromise }) => {
           Your personal shelf of meaningful connections. Browse, tend, and
           nurture the relationships that matter most.
         </p>
-        <button data-aos="zoom-in" className="btn bg-[#244D3F] hover:bg-info text-white mt-6 border-none">
+        <button data-aos="zoom-in" className="btn bg-[#244D3F] hover:bg-accent text-white mt-6 border-none">
           + Add a Friend
         </button>
       </div>

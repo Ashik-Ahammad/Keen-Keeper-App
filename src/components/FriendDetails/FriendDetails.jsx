@@ -1,12 +1,11 @@
 import { FaBoxArchive } from "react-icons/fa6";
-import { FiPhoneCall } from "react-icons/fi";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
-import { MdOutlineVideoCall, MdTextsms } from "react-icons/md";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { useLoaderData } from "react-router";
 import { toast } from "react-toastify";
 import { useContext } from "react";
 import { TimelineContext } from "../../context/TimelineContext";
+import { MessageSquareMore, PhoneCall, Video } from "lucide-react";
 
 const FriendDetails = () => {
   const friend = useLoaderData();
@@ -45,7 +44,6 @@ const FriendDetails = () => {
   return (
     <div className="p-6 mt-10 min-h-screen w-7/12 mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
         <div className="bg-white rounded-2xl shadow p-6 text-center">
           <img
             src={friend.picture}
@@ -57,7 +55,7 @@ const FriendDetails = () => {
 
           <div
             className={`inline-block px-3 py-1 text-white text-sm rounded-full capitalize mt-2 ${getStatusColor(
-              friend.status
+              friend.status,
             )}`}
           >
             {friend.status}
@@ -74,9 +72,7 @@ const FriendDetails = () => {
             ))}
           </div>
 
-          <p className="text-gray-500 text-sm mt-4 italic">
-            "{friend.bio}"
-          </p>
+          <p className="text-gray-500 text-sm mt-4 italic">"{friend.bio}"</p>
 
           <p className="text-gray-400 mt-3">{friend.email}</p>
 
@@ -104,7 +100,6 @@ const FriendDetails = () => {
         </div>
 
         <div className="lg:col-span-2 space-y-6">
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-white rounded-xl shadow p-4 text-center">
               <h2 className="text-2xl font-bold">
@@ -129,9 +124,7 @@ const FriendDetails = () => {
           <div className="bg-white rounded-xl shadow p-5 flex justify-between items-center">
             <div>
               <h3 className="font-semibold text-lg">Relationship Goal</h3>
-              <p className="text-gray-500">
-                Connect every {friend.goal} days
-              </p>
+              <p className="text-gray-500">Connect every {friend.goal} days</p>
             </div>
             <button className="border px-4 py-1 rounded hover:bg-gray-100 border-gray-100 shadow-md hover:cursor-pointer">
               Edit
@@ -142,13 +135,12 @@ const FriendDetails = () => {
             <h3 className="font-semibold text-lg mb-4">Quick Check-In</h3>
 
             <div className="grid grid-cols-3 gap-4">
-
               <button
                 onClick={handleCall}
                 className="border p-4 border-gray-100 shadow-md rounded-lg hover:bg-gray-100 hover:cursor-pointer"
               >
                 <span className="flex flex-col items-center justify-center">
-                  <FiPhoneCall />
+                  <PhoneCall />
                   <p>Call</p>
                 </span>
               </button>
@@ -158,7 +150,7 @@ const FriendDetails = () => {
                 className="border p-4 border-gray-100 shadow-md rounded-lg hover:bg-gray-100 hover:cursor-pointer"
               >
                 <span className="flex flex-col items-center justify-center">
-                  <MdTextsms />
+                  <MessageSquareMore />
                   <p>Text</p>
                 </span>
               </button>
@@ -168,14 +160,12 @@ const FriendDetails = () => {
                 className="border p-4 rounded-lg hover:bg-gray-100 border-gray-100 shadow-md hover:cursor-pointer"
               >
                 <span className="flex flex-col items-center justify-center">
-                  <MdOutlineVideoCall />
+                      <Video />
                   <p>Video</p>
                 </span>
               </button>
-
             </div>
           </div>
-
         </div>
       </div>
     </div>
