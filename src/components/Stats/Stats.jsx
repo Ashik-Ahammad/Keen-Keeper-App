@@ -30,7 +30,7 @@ const Stats = () => {
       </h1>
 
       {activities.length === 0 ? (
-        <p className="text-center text-gray-500">No interactions logged yet.</p>
+        <p data-aos="flip-left" className="text-center text-gray-500">No interactions logged yet.</p>
       ) : (
         <div className="bg-white shadow rounded-xl p-4 sm:p-6 flex flex-col items-center">
           <div className="w-full h-64 sm:h-80 md:h-96">

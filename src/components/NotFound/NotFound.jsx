@@ -1,12 +1,19 @@
 import React from "react";
 import { Link } from "react-router";
 import { RiArrowGoBackFill } from "react-icons/ri";
-import notFoundImg from "../../assets/notfoun.svg";
+import notFoundIcon from "../../assets/404error.webm";
 
 const NotFound = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-center">
-      <img src={notFoundImg} alt="" width="600" height="600" />
+      <video
+        src={notFoundIcon}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-56"
+      />
       <p className="my-5 text-3xl">
         The page you are looking for does not exist.
       </p>

@@ -16,17 +16,39 @@ const Timeline = () => {
 
   const [filter, setFilter] = useState("All");
 
-  const filteredActivities = filter === "All" ? activities : activities.filter((item) => item.type === filter);
+  const [search, setSearch] = useState("");
 
-  const sortedActivities = [...filteredActivities]
+  const filteredActivities = activities.filter((item) => {
+    const matchesType =
+      filter === "All" || item.type.toLowerCase() === filter.toLowerCase();
+
+    const matchesSearch =
+      item.name.toLowerCase().includes(search.toLowerCase()) ||
+      item.type.toLowerCase().includes(search.toLowerCase());
+
+    return matchesType && matchesSearch;
+  });
+
+  const sortedActivities = [...filteredActivities];
 
   return (
-    <div className="p-4 sm:p-6 mt-6 md:mt-10 min-h-screen w-full md:w-9/12 lg:w-7/12
-overflow-x-hidden mx-auto">
+    <div
+      className="p-4 sm:p-6 mt-6 md:mt-10 min-h-screen w-full md:w-9/12 lg:w-7/12
+overflow-x-hidden mx-auto"
+    >
       <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Timeline</h1>
 
-      <div className="mb-6">
+      <div className="mb-4 flex flex-col sm:flex-row gap-3">
+        <input
+        data-aos="fade-right"
+          type="text"
+          placeholder="Search by name or type..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="input input-bordered w-full sm:w-auto"
+        />
         <select
+        data-aos="fade-right"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
           className="select w-full sm:w-auto"
@@ -41,8 +63,7 @@ overflow-x-hidden mx-auto">
       {sortedActivities.length === 0 ? (
         <p className="text-gray-500">No activity yet</p>
       ) : (
-        <div className="space-y-4"
-         data-aos="fade-up">
+        <div className="space-y-4" data-aos="fade-up">
           {sortedActivities.map((item) => (
             <div
               key={item.id}
@@ -50,7 +71,7 @@ overflow-x-hidden mx-auto">
             >
               <div className="border-r-2 pr-3">
                 {item.type.toLowerCase() === "call" ? (
-                     <PhoneCall className="text-xl sm:text-2xl text-green-800" />
+                  <PhoneCall className="text-xl sm:text-2xl text-green-800" />
                 ) : item.type.toLowerCase() === "video" ? (
                   <Video className="text-xl sm:text-2xl text-accent" />
                 ) : (
